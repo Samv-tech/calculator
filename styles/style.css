@@ -1,0 +1,88 @@
+body, button {
+    font-family: 'Lato', sans-serif;
+    background: lightgrey;
+}
+
+#container {
+    width: 350px;
+    height: 501px;
+    border: 2px solid rgba(126, 126, 130, .3);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.display {
+    background: #242226;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0px 15px 0 15px;
+    min-height: 100px;
+    color: white;
+}
+
+.nums {
+    background: #7e7e82;
+    height: 400px;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "clear      division    multiply    minus"
+        "seven      eight       nine        add"
+        "four       five        six         add"
+        "one        two         three       equals"
+        "zero       zero        decimal     equals"
+}
+
+.currentOperation {
+    font-size: 40px;
+    word-break: break-all;
+}
+
+.prevOperation {
+    font-size: 20px;
+    opacity: .7;
+}
+
+.equals {
+    grid-area: equals;
+}
+
+.add {
+    grid-area: add;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    font-size: 22px;
+    outline: none;
+}
+
+button:hover {
+    opacity: 80%;
+}
+
+.op {
+    background: #F6A322;
+    color: white;
+}
+
+.clear, .dec {
+    background: #cecdd1 !important;
+}
+
+.num-btn {
+    background: #dddde1;
+}
